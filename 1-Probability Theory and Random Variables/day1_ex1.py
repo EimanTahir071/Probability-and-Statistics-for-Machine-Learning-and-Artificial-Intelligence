@@ -1,7 +1,9 @@
 import numpy as np
 
+rng = np.random.default_rng(42)
+
 # Simulating 10,000 dice rolls
-rolls = np.random.randint(1, 7, size=10000)
+rolls = rng.integers(1, 7, size=10000)
 
 # Calculate probabilities
 P_even = np.sum(rolls % 2 == 0) / len(rolls)
