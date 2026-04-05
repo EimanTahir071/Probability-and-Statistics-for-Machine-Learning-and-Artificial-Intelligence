@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.stats import norm, binom, poisson, uniform
+from scipy.stats import norm, binom, poisson
 import seaborn as sns
 
 # Gaussian Distribution
