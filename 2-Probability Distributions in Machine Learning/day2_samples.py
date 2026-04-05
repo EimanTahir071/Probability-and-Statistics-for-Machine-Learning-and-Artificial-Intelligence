@@ -9,13 +9,14 @@ plt.plot(x, norm.pdf(x, loc=0, scale=1), label="Gaussian (u=0, s=1)")
 
 # Binomial Distribution
 n, p = 10, 0.5
-x = np.arange(0, n+1)
-plt.bar(x, binom.pmf(x, n, p), alpha=0.7, label="Binomial (n=10, p=0.5)")
+bar_width = 0.4
+x_binom = np.arange(0, n+1)
+plt.bar(x_binom - bar_width/2, binom.pmf(x_binom, n, p), width=bar_width, alpha=0.7, label="Binomial (n=10, p=0.5)")
 
 #Poisson Distribution
 lam = 3
-x = np.arange(0,10)
-plt.bar(x, poisson.pmf(x, lam), alpha=0.7, label="Poisson (l = 3)")
+x_poisson = np.arange(0, 10)
+plt.bar(x_poisson + bar_width/2, poisson.pmf(x_poisson, lam), width=bar_width, alpha=0.7, label="Poisson (l = 3)")
 
 # Uniform Distribution
 x = np.random.uniform(low=0, high=10, size=1000)
