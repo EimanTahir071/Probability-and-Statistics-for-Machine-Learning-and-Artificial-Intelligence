@@ -13,7 +13,7 @@ bar_width = 0.4
 x_binom = np.arange(0, n+1)
 plt.bar(x_binom - bar_width/2, binom.pmf(x_binom, n, p), width=bar_width, alpha=0.7, label="Binomial (n=10, p=0.5)")
 
-#Poisson Distribution
+# Poisson Distribution
 lam = 3
 x_poisson = np.arange(0, 10)
 plt.bar(x_poisson + bar_width/2, poisson.pmf(x_poisson, lam), width=bar_width, alpha=0.7, label="Poisson (l = 3)")
