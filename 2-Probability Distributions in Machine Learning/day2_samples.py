@@ -19,7 +19,8 @@ x_poisson = np.arange(0, 10)
 plt.bar(x_poisson + bar_width/2, poisson.pmf(x_poisson, lam), width=bar_width, alpha=0.7, label="Poisson (l = 3)")
 
 # Uniform Distribution
-x = np.random.uniform(low=0, high=10, size=1000)
+rng = np.random.default_rng(42)
+x = rng.uniform(low=0, high=10, size=1000)
 sns.histplot(x, kde=True, stat="density", label="Uniform", color="red")
 
 plt.title("Probability Distributions")
