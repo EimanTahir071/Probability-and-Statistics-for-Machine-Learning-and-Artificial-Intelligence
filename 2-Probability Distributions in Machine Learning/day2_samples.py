@@ -19,7 +19,7 @@ plt.bar(x, poisson.pmf(x, lam), alpha=0.7, label="Poisson (l = 3)")
 
 # Uniform Distribution
 x = np.random.uniform(low=0, high=10, size=1000)
-sns.histplot(x, kde=True, label="Uniform", color="red")
+sns.histplot(x, kde=True, stat="density", label="Uniform", color="red")
 
 plt.title("Probability Distributions")
 plt.legend()
